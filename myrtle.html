@@ -86,7 +86,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <link rel='stylesheet' id='elementor-post-93-css' href='http://localhost:8888/WordPressDev/wp-content/uploads/elementor/css/post-93.css?ver=1694908507' media='all' />
 <link rel='stylesheet' id='swiper-css' href='http://localhost:8888/WordPressDev/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' media='all' />
 <link rel='stylesheet' id='elementor-global-css' href='http://localhost:8888/WordPressDev/wp-content/uploads/elementor/css/global.css?ver=1694908545' media='all' />
-<link rel='stylesheet' id='elementor-post-34-css' href='http://localhost:8888/WordPressDev/wp-content/uploads/elementor/css/post-34.css?ver=1694981732' media='all' />
+<link rel='stylesheet' id='elementor-post-34-css' href='http://localhost:8888/WordPressDev/wp-content/uploads/elementor/css/post-34.css?ver=1694982649' media='all' />
 <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto+Serif%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CLato%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRaleway%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.3' media='all' />
 <link rel='stylesheet' id='elementor-icons-shared-0-css' href='http://localhost:8888/WordPressDev/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
 <link rel='stylesheet' id='elementor-icons-fa-solid-css' href='http://localhost:8888/WordPressDev/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all' />
@@ -313,7 +313,11 @@ background-color:#bdd1cd;
 
 
 <div class="dropdown">
-  <button onmouseover="myFunction()" class="dropbtn">Dropdown</button>
+  <button 
+  onmouseover="showDropDown()" 
+  onmouseout="hideDropDown()"
+  
+  class="dropbtn">Dropdown</button>
   <div id="myDropdown" class="dropdown-content">
     
     <a href="#about">About us</a>
@@ -325,9 +329,14 @@ background-color:#bdd1cd;
 <script>
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function myFunction() {
+function showDropDown() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
+
+function hideDropDown() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
